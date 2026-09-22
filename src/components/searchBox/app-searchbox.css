@@ -1,0 +1,56 @@
+.search-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.page-link a {
+    text-decoration: none;
+    color: #252525;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.page-link>img {
+    width: 20px;
+    height: 20px;
+}
+
+.page-link a:hover {
+    color: #ff0000;
+}
+
+#search-form {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+#campo-busca {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 50px 10px 10px;
+    border: none;
+    background-color: #EAEAEA;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#botao-busca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #ff0000;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+}

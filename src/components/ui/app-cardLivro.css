@@ -1,0 +1,48 @@
+.card-livro-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-livro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 270px;
+    min-height: 360px;
+    border-radius: 10px;
+    background-color: #EEEEEE;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+}
+
+.card-livro-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 280px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.card-livro-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.card-livro-info {
+    width: 100%;
+    padding: 12px 15px 15px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.card-livro-info h3,
+.card-livro-info p {
+    margin: 0;
+    text-align: left;
+}
