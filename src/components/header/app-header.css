@@ -57,13 +57,32 @@
     height: auto;
 }
 
-
 @media (max-width: 600px) {
-.navegation {
-    display: none;
-}
+    .header-container {
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+    }
 
-.insta-icon {
-    display: none;
-}
+    .navegation {
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .navegation-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .navegation-item a {
+        font-size: 16px;
+    }
+
+    .insta-icon {
+        display: flex;
+        width: 45px;
+    }
 }
