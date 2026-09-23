@@ -5,6 +5,8 @@ import Board from './components/board/board.js';
 import SearchBox from './components/searchBox/searchBox.js';
 import Booklib from './components/bookslib/bookslib.js';
 import Acervo from './pages/acervo';
+import Sobre from './pages/sobre';
+import Footer from './components/footer/footer.js';
 
 function Inicio() {
   return (
@@ -25,8 +27,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/acervo" element={<Acervo />} />
+          <Route path="/sobre" element={<Sobre />} />
         </Routes>
       </main>
+
+      <Footer />
     </>
   );
 }
