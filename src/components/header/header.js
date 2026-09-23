@@ -24,7 +24,7 @@ export default function Header() {
             </nav>
 
             <div className="insta-icon">
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/si.ufal.penedo/" target="_blank" rel="noopener noreferrer">
                     <img src={insta} alt="Instagram" />
                 </a>
             </div>
