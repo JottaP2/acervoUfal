@@ -17,7 +17,7 @@
 
 .navegation {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     background-color: #ED1C24;
     width: 100%;
@@ -55,4 +55,15 @@
 .insta-icon>a>img {
     width: 25px;
     height: auto;
+}
+
+
+@media (max-width: 600px) {
+.navegation {
+    display: none;
+}
+
+.insta-icon {
+    display: none;
+}
 }

@@ -1,5 +1,6 @@
 import './app-searchbox.css';
 import arrow from '../../assets/arrow.svg';
+import { Link } from 'react-router-dom';
 
 export default function SearchBox() {
     return (
@@ -10,7 +11,7 @@ export default function SearchBox() {
             </form>
 
             <div className="page-link">
-                <a href="#">Ver acervo completo</a>
+                <Link to="/acervo">Ver todos os livros</Link>
                 <img src={arrow} alt="livros" />
             </div>
         </section>

@@ -11,6 +11,7 @@ export default function CardLivro({ livro }) {
                 <div className="card-livro-info">
                     <h3>{livro.titulo}</h3>
                     <p><strong>Autor:</strong> {livro.autor}</p>
+                    <p><strong>Código:</strong> {livro.codigo}</p>
                 </div>
             </div>
             
