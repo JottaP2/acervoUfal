@@ -3,7 +3,7 @@ import CardLivro from "../components/ui/cardLivro.js";
 
 const livros = [
     {
-        titulo: "JavaScript: O Guia Definitivo",
+        titulo: "JavaScript - O Guia Definitivo",
         autor: "David Flanagan",
         codigo: "000001",
         imagem: "https://m.media-amazon.com/images/I/91hUer84PpL.jpg"
