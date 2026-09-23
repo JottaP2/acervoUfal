@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Acervo Digital - Ufal Anexo Penedo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Capa do Projeto](https://github.com/JottaP2/acervoUfal/blob/main/caminho-para-sua-imagem.jpg) <!-- Substitua pelo link da imagem de capa do seu repositório -->
 
-## Available Scripts
+## Sobre o Projeto
+O projeto **Acervo Digital** tem como objetivo catalogar todos os livros, teses e artigos impressos disponíveis na sala de estudos da Ufal Anexo Penedo, situada na Escola Municipal Manoel Soares de Melo. 
 
-In the project directory, you can run:
+A iniciativa surgiu da necessidade de dar maior visibilidade aos recursos bibliográficos da unidade, com o intuito de fortalecer a base de pesquisa e aprendizagem dos estudantes[cite: 1]. O sistema funciona como uma vitrine virtual, resolvendo o problema da falta de informação online sobre os materiais físicos e evitando que a comunidade acadêmica precise se deslocar apenas para consultar a disponibilidade de um conteúdo[cite: 1].
 
-### `npm start`
+## Público-Alvo
+O sistema web foi pensado para atender os estudantes da Ufal Anexo Penedo e toda a comunidade acadêmica que utiliza o espaço da sala de estudos[cite: 1].
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Funcionalidades (MVP - AB1)
+Nesta primeira entrega, o protótipo foca em ser um mapeamento visual do conteúdo existente. As funcionalidades atuais incluem:
+* Organização do acervo com exibição de nome do livro, autor e imagem ilustrativa da capa.
+* Layout responsivo e de fácil interação.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Roadmap (Próximas Atualizações)
+Para as futuras versões do sistema, estão planejadas as seguintes implementações:
+* [ ] Sistema de pesquisa lógica de livros.
+* [ ] Página de administrador (Admin) para facilitar a inserção e gerenciamento de novos livros.
+* [ ] Verificação e possível disponibilização de versões digitais (PDFs) das obras.
 
-### `npm test`
+## Links Úteis
+* **Repositório GitHub:** [https://github.com/JottaP2/acervoUfal](https://github.com/JottaP2/acervoUfal)
+* **Preview Online (Provisório):** [Acesse o Acervo Digital aqui](https://acervoufalweb1.duckdns.org/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contexto Acadêmico
+Este projeto foi desenvolvido por **João Paulo Marinho Santos**.
+Trabalho solicitado para obtenção de nota na disciplina de **Programação Web 1**, do Curso de Bacharelado em Sistemas de Informação da Universidade Federal de Alagoas (UFAL), Campus Arapiraca - Unidade Educacional Penedo.
+* **Ano:** 2026
+* **Orientador:** Docente Gustavo Miranda
