@@ -1,8 +1,8 @@
 .footer-container{
     display: flex;
     justify-content: space-around;
-    background-color: #191919;
+    background-color: var(--color-footer);
     align-items: center;
     margin: 0 auto;
-    color: white;
+    color: var(--color-on-dark);
 }

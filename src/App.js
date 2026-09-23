@@ -22,7 +22,6 @@ function App() {
   return (
     <>
       <Header />
-
       <main className="main-app">
         <Routes>
           <Route path="/" element={<Inicio />} />
@@ -30,7 +29,6 @@ function App() {
           <Route path="/sobre" element={<Sobre />} />
         </Routes>
       </main>
-
       <Footer />
     </>
   );

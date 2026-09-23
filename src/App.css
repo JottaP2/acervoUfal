@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+:root {
+    --color-background: #FAFAFA;
+    --color-primary: #ED1C24;
+    --color-primary-action: #ff0000;
+    --color-text: #252525;
+    --color-surface-dark: #2D2D2D;
+    --color-footer: #191919;
+    --color-surface: #EEEEEE;
+    --color-border: #EAEAEA;
+    --color-on-dark: #FFFFFF;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +20,7 @@
 }
 
 html {
-    background-color: #FAFAFA;
+    background-color: var(--color-background);
 }
 
 .main-app {
