@@ -1,6 +1,6 @@
 # Acervo Digital - Ufal Anexo Penedo
 
-![Capa do Projeto](https://github.com/JottaP2/acervoUfal/blob/main/caminho-para-sua-imagem.jpg) <!-- Substitua pelo link da imagem de capa do seu repositório -->
+![Capa do Projeto](https://github.com/user-attachments/assets/d950dbf8-e317-49ea-bb31-61b9aca2d0bf) <!-- Substitua pelo link da imagem de capa do seu repositório -->
 
 ## Sobre o Projeto
 O projeto **Acervo Digital** tem como objetivo catalogar todos os livros, teses e artigos impressos disponíveis na sala de estudos da Ufal Anexo Penedo, situada na Escola Municipal Manoel Soares de Melo. 
