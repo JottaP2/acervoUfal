@@ -2,11 +2,12 @@ import Styles from "../header/Header.module.css"
 import Logo from "../../assets/acervo-digital-logo.png"
 import { Search } from "lucide-react"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const menuLinks = [
-    { name: "Início", href: "#", active: true },
-    { name: "Livros", href: "#" },
-    { name: "Sobre", href: "#" }
+    { name: "Início", href: "/", active: true },
+    { name: "Livros", href: "/livros" },
+    { name: "Sobre", href: "/sobre" }
 ]
 
 export default function Header() {
@@ -29,12 +30,9 @@ export default function Header() {
                 <ul className={Styles.menu}>
                     {menuLinks.map((link) => (
                         <li key={link.name}>
-                            <a
-                                className={link.active ? Styles.active : undefined}
-                                href={link.href}
-                            >
+                            <Link to={link.href}>
                                 {link.name}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>

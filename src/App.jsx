@@ -1,22 +1,21 @@
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import Header from "./components/header/Header"
-import InformativoCard from "./components/informativoCard/informativoCard"
+import Inicio from "./pages/Inicio"
+import Livros from "./pages/Livros"
+import Sobre from "./pages/Sobre"
 import "./App.css"
 
 function App() {
-
   return (
-    <>
+    <Router>
       <Header />
-      <main className="mainContainer">
-        <section className="informativoSection">
-          <article className="informativoCards">
-          <InformativoCard cardNumber="1" cardTitle="Informativo" cardDescription="Este é um informativo de teste" />
-          <InformativoCard cardNumber="1" cardTitle="Informativo" cardDescription="Este é um informativo de teste" />
-          <InformativoCard cardNumber="1" cardTitle="Informativo" cardDescription="Este é um informativo de teste" />
-          </article>
-        </section>
-      </main>
-    </>
+
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/livros" element={<Livros />} />
+        <Route path="/sobre" element={<Sobre />} />
+      </Routes>
+    </Router>
   )
 }
 
