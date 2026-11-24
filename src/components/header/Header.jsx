@@ -1,17 +1,18 @@
 import Styles from "../header/Header.module.css"
 import Logo from "../../assets/acervo-digital-logo.png"
-import { Search } from "lucide-react"
+import { Menu, Search, X } from "lucide-react"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 const menuLinks = [
-    { name: "Início", href: "/", active: true },
+    { name: "Início", href: "/" },
     { name: "Livros", href: "/livros" },
     { name: "Sobre", href: "/sobre" }
 ]
 
 export default function Header() {
     const [busca, setBusca] = useState("")
+    const [menuAberto, setMenuAberto] = useState(false)
 
     function pesquisar(evento) {
         evento.preventDefault()
@@ -25,14 +26,37 @@ export default function Header() {
     return (
         <header className={Styles.header}>
             <nav className={Styles.navigation} aria-label="Navegação principal">
-                <img src={Logo} alt="Acervo Digital" />
+                <NavLink to="/" className={Styles.logo} onClick={() => setMenuAberto(false)}>
+                    <img src={Logo} alt="Acervo Digital - página inicial" />
+                </NavLink>
 
-                <ul className={Styles.menu}>
+                <button
+                    className={Styles.menuButton}
+                    type="button"
+                    aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
+                    aria-expanded={menuAberto}
+                    aria-controls="menu-principal"
+                    onClick={() => setMenuAberto((aberto) => !aberto)}
+                >
+                    {menuAberto
+                        ? <X size={24} aria-hidden="true" />
+                        : <Menu size={24} aria-hidden="true" />}
+                </button>
+
+                <ul
+                    id="menu-principal"
+                    className={`${Styles.menu} ${menuAberto ? Styles.menuOpen : ""}`}
+                >
                     {menuLinks.map((link) => (
                         <li key={link.name}>
-                            <Link to={link.href}>
+                            <NavLink
+                                to={link.href}
+                                end
+                                className={({ isActive }) => (isActive ? Styles.active : undefined)}
+                                onClick={() => setMenuAberto(false)}
+                            >
                                 {link.name}
-                            </Link>
+                            </NavLink>
                         </li>
                     ))}
                 </ul>

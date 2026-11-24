@@ -1,0 +1,44 @@
+.inicioMain {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.informativoCardsContainer {
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+.informativoCardsContent {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    width: min(1100px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 40px 0 56px;
+}
+
+.informativoTitle {
+    grid-column: 1 / -1;
+    margin: 0 0 8px;
+    color: #0b2a4a;
+    font-size: clamp(20px, 3vw, 24px);
+    font-weight: 700;
+    text-align: left;
+}
+
+/* Tablet e mobile: um card por linha */
+@media (max-width: 768px) {
+    .informativoCardsContent {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: calc(100% - 32px);
+        padding: 32px 0 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .inicioMain {
+        margin-top: 16px;
+    }
+}
