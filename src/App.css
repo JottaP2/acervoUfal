@@ -1,0 +1,17 @@
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.informativoSection{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.informativoCards{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+}

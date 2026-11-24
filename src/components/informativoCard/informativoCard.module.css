@@ -1,0 +1,43 @@
+.informativoCard {
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: min(300px, 100%);
+    padding: 20px;
+    border: 1px solid #dbe3ec;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.cardNumber {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #006bc8;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.cardContent h2,
+.cardContent p {
+    margin: 0;
+}
+
+.cardContent h2 {
+    margin-bottom: 4px;
+    color: #292d35;
+    font-size: 18px;
+}
+
+.cardContent p {
+    color: #5f6b7a;
+}
