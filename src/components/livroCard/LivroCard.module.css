@@ -1,0 +1,96 @@
+.livroCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 0;
+}
+
+.capa {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    margin: 0 0 12px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #eef1f5;
+}
+
+.capa img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capaVazia {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    color: #91a0b5;
+}
+
+.patrimonio {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 100%;
+    margin-bottom: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: #277eff;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.patrimonio svg {
+    flex-shrink: 0;
+}
+
+.titulo {
+    margin: 0 0 6px;
+    color: #1f2328;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.autor {
+    margin: 0;
+    color: #5f6368;
+    font-size: 15px;
+}
+
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .capa {
+        border-radius: 8px;
+    }
+
+    .patrimonio {
+        padding: 4px 10px;
+        font-size: 13px;
+    }
+
+    .titulo {
+        font-size: 15px;
+    }
+
+    .autor {
+        font-size: 13px;
+    }
+}

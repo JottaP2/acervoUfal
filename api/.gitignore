@@ -1,0 +1,5 @@
+# Banco de dados local (cada pessoa gera o seu ao rodar a API)
+*.db
+*.db-journal
+*.api/db_acervoufal.sqbpro
+*.api/db_acervoufal.db

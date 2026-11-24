@@ -1,0 +1,198 @@
+.adminMain {
+    width: min(1100px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 32px 0 56px;
+}
+
+.titulo {
+    margin: 0 0 4px;
+    color: #0b2a4a;
+    font-size: 24px;
+}
+
+.subtitulo {
+    margin: 0 0 24px;
+    color: #5f6b7a;
+}
+
+.secaoTitulo {
+    margin: 0 0 16px;
+    color: #1f2328;
+    font-size: 17px;
+}
+
+/* Formulário + prévia lado a lado */
+.cadastro {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.formulario,
+.previa,
+.lista {
+    padding: 20px;
+    border: 1px solid #e3e7ed;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #292d35;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.campo input {
+    height: 42px;
+    padding: 8px 12px;
+    border: 1px solid #dbe3ec;
+    border-radius: 6px;
+    background: #f8fafc;
+    font-size: 16px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.mensagem {
+    margin: 0;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background: #eef4ff;
+    color: #0b2a4a;
+    font-size: 14px;
+}
+
+.botaoPrimario {
+    align-self: flex-start;
+    height: 42px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 6px;
+    background: #006bc8;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botaoPrimario:hover {
+    background: #0058a5;
+}
+
+.previaCard {
+    max-width: 200px;
+}
+
+/* Lista de livros */
+.vazio {
+    margin: 0;
+    color: #5f6b7a;
+}
+
+.itens {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-top: 1px solid #eef1f5;
+}
+
+.itemCapa {
+    width: 44px;
+    height: 66px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #eef1f5;
+}
+
+.itemCapa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.itemInfo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    color: #5f6b7a;
+    font-size: 14px;
+}
+
+.itemInfo strong {
+    color: #1f2328;
+    font-size: 15px;
+}
+
+.botaoIcone,
+.botaoDestaqueAtivo,
+.botaoRemover {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border: 1px solid #dbe3ec;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #5f6b7a;
+    cursor: pointer;
+}
+
+.botaoDestaqueAtivo {
+    border-color: #f5c04a;
+    background: #fff8e6;
+    color: #d19a00;
+}
+
+.botaoRemover:hover {
+    background: #fdecec;
+    color: #b42318;
+}
+
+/* Celular: tudo em uma coluna */
+@media (max-width: 768px) {
+    .adminMain {
+        width: calc(100% - 32px);
+        padding: 24px 0 40px;
+    }
+
+    .cadastro {
+        grid-template-columns: 1fr;
+    }
+
+    .botaoPrimario {
+        align-self: stretch;
+    }
+
+    .formulario,
+    .previa,
+    .lista {
+        padding: 16px;
+    }
+}

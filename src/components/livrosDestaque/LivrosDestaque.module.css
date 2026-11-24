@@ -1,0 +1,75 @@
+.destaqueSection {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.destaqueContent {
+    width: min(1100px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 40px 0 56px;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.titulo {
+    margin: 0;
+    color: #0b2a4a;
+    font-size: clamp(20px, 3vw, 24px);
+    font-weight: 700;
+}
+
+.verTodos {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    color: #006bc8;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.verTodos:hover,
+.verTodos:focus-visible {
+    text-decoration: underline;
+}
+
+/* Até 4 livros por linha no desktop */
+.grade {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Tablet e mobile: 2 por linha */
+@media (max-width: 900px) {
+    .grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .destaqueContent {
+        width: calc(100% - 32px);
+        padding: 32px 0 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grade {
+        gap: 24px 12px;
+    }
+
+    .verTodos {
+        font-size: 14px;
+    }
+}
