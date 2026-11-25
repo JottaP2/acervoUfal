@@ -5,18 +5,13 @@ import { API_URL } from "../api"
 import Styles from "./Admin.module.css"
 
 export default function Admin() {
-
     const [livros, setLivros] = useState([])
-
-
     const [titulo, setTitulo] = useState("")
     const [autor, setAutor] = useState("")
     const [patrimonio, setPatrimonio] = useState("")
     const [capa, setCapa] = useState("")
     const [destaque, setDestaque] = useState(false)
-
     const [mensagem, setMensagem] = useState("")
-
 
     function buscarLivros() {
         fetch(`${API_URL}/livros`)
@@ -29,15 +24,23 @@ export default function Admin() {
         buscarLivros()
     }, [])
 
+    function limparFormulario() {
+        setTitulo("")
+        setAutor("")
+        setPatrimonio("")
+        setCapa("")
+        setDestaque(false)
+    }
+
     function adicionarLivro() {
         if (titulo === "" || autor === "" || patrimonio === "") {
             setMensagem("Preencha título, autor e patrimônio.")
             return
         }
-        else if (livros.some((livro) => livro.patrimonio === patrimonio)) {
+
+        if (livros.some((livro) => livro.patrimonio === patrimonio)) {
             setMensagem("Já existe um livro com esse patrimônio.")
             return
-            
         }
 
         const novoLivro = { titulo, autor, patrimonio, capa, destaque }
@@ -49,12 +52,7 @@ export default function Admin() {
         })
             .then(() => {
                 setMensagem(`"${titulo}" foi adicionado!`)
-
-                setTitulo("")
-                setAutor("")
-                setPatrimonio("")
-                setCapa("")
-                setDestaque(false)
+                limparFormulario()
                 buscarLivros()
             })
             .catch(() => setMensagem("Não foi possível salvar o livro."))
@@ -69,7 +67,6 @@ export default function Admin() {
             .then(() => buscarLivros())
             .catch(() => setMensagem("Não foi possível atualizar o destaque."))
     }
-
 
     function removerLivro(livro) {
         if (!window.confirm(`Remover "${livro.titulo}"?`)) return
@@ -136,6 +133,7 @@ export default function Admin() {
 
                 <div className={Styles.previa}>
                     <h2 className={Styles.secaoTitulo}>Prévia</h2>
+
                     <div className={Styles.previaCard}>
                         <LivroCard
                             capa={capa}

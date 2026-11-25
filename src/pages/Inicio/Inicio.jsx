@@ -1,6 +1,6 @@
 import Banner from "../../components/banner/Banner"
-import InformativoCard from "../../components/informativoCard/informativoCard"
 import LivrosDestaque from "../../components/livrosDestaque/LivrosDestaque"
+import InformativoCard from "../../components/informativoCard/informativoCard"
 import Styles from "./Inicio.module.css"
 
 const cardData = [
@@ -21,15 +21,16 @@ const cardData = [
     }
 ]
 
-
 export default function Inicio() {
     return (
         <main className={Styles.inicioMain}>
             <Banner />
             <LivrosDestaque />
+
             <article className={Styles.informativoCardsContainer}>
                 <div className={Styles.informativoCardsContent}>
                     <h1 className={Styles.informativoTitle}>Como encontrar um livro</h1>
+
                     {cardData.map((card) => (
                         <InformativoCard
                             key={card.cardNumber}

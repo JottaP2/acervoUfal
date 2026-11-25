@@ -7,6 +7,7 @@ export default function InformativoCard({ cardNumber, cardTitle, cardDescription
                 <div className={Styles.cardNumber}>
                     <strong>{cardNumber}</strong>
                 </div>
+
                 <div className={Styles.cardContent}>
                     <h2>{cardTitle}</h2>
                     <p>{cardDescription}</p>

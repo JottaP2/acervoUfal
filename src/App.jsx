@@ -6,18 +6,16 @@ import Sobre from "./pages/Sobre"
 import Admin from "./admin/Admin"
 import "./App.css"
 
-function App() {
-  return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/livros" element={<Livros />} />
-        <Route path="/sobre" element={<Sobre />} />
-        <Route path="/admin" element={<Admin />} />
-      </Routes>
-    </Router>
-  )
+export default function App() {
+    return (
+        <Router>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Inicio />} />
+                <Route path="/livros" element={<Livros />} />
+                <Route path="/sobre" element={<Sobre />} />
+                <Route path="/admin" element={<Admin />} />
+            </Routes>
+        </Router>
+    )
 }
-
-export default App

@@ -1,8 +1,8 @@
-import Styles from "../header/Header.module.css"
-import Logo from "../../assets/acervo-digital-logo.png"
-import { Menu, Search, X } from "lucide-react"
 import { useState } from "react"
 import { NavLink } from "react-router-dom"
+import { Menu, Search, X } from "lucide-react"
+import Logo from "../../assets/acervo-digital-logo.png"
+import Styles from "./Header.module.css"
 
 const menuLinks = [
     { name: "Início", href: "/" },
@@ -38,15 +38,14 @@ export default function Header() {
                     aria-controls="menu-principal"
                     onClick={() => setMenuAberto((aberto) => !aberto)}
                 >
-                    {menuAberto
-                        ? <X size={24} aria-hidden="true" />
-                        : <Menu size={24} aria-hidden="true" />}
+                    {menuAberto ? (
+                        <X size={24} aria-hidden="true" />
+                    ) : (
+                        <Menu size={24} aria-hidden="true" />
+                    )}
                 </button>
 
-                <ul
-                    id="menu-principal"
-                    className={`${Styles.menu} ${menuAberto ? Styles.menuOpen : ""}`}
-                >
+                <ul id="menu-principal" className={`${Styles.menu} ${menuAberto ? Styles.menuOpen : ""}`}>
                     {menuLinks.map((link) => (
                         <li key={link.name}>
                             <NavLink

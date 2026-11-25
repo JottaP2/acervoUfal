@@ -1,17 +1,17 @@
-import Styles from "./LivroCard.module.css"
 import { BookOpen } from "lucide-react"
+import Styles from "./LivroCard.module.css"
 
 export default function LivroCard({ capa, titulo, autor, patrimonio }) {
     return (
         <article className={Styles.livroCard}>
             <figure className={Styles.capa}>
-                {capa
-                    ? <img src={capa} alt={`Capa do livro ${titulo}`} loading="lazy" />
-                    : (
-                        <div className={Styles.capaVazia} aria-hidden="true">
-                            <BookOpen size={40} />
-                        </div>
-                    )}
+                {capa ? (
+                    <img src={capa} alt={`Capa do livro ${titulo}`} loading="lazy" />
+                ) : (
+                    <div className={Styles.capaVazia} aria-hidden="true">
+                        <BookOpen size={40} />
+                    </div>
+                )}
             </figure>
 
             <span className={Styles.patrimonio}>

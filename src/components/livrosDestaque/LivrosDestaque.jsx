@@ -7,7 +7,6 @@ import Styles from "./LivrosDestaque.module.css"
 export default function LivrosDestaque() {
     const [livros, setLivros] = useState([])
 
-    // Busca os livros na API uma vez, quando a página abre
     useEffect(() => {
         fetch(`${API_URL}/livros`)
             .then((resposta) => resposta.json())
@@ -15,10 +14,8 @@ export default function LivrosDestaque() {
             .catch(() => setLivros([]))
     }, [])
 
-    // Só os livros em destaque, no máximo 4
     const destaques = livros.filter((livro) => livro.destaque).slice(0, 4)
 
-    // Sem destaques, a seção não aparece
     if (destaques.length === 0) return null
 
     return (

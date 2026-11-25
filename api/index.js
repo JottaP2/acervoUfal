@@ -3,6 +3,7 @@ import cors from "cors"
 import db from "./database.js"
 
 const app = express()
+
 app.use(cors())
 app.use(express.json())
 
@@ -12,6 +13,7 @@ app.get("/", (req, res) => {
 
 app.get("/livros", (req, res) => {
     const livros = db.prepare("SELECT * FROM livros ORDER BY id DESC").all()
+
     res.json(livros)
     console.log(livros)
 })
@@ -24,6 +26,7 @@ app.post("/livros", (req, res) => {
     }
 
     const existe = db.prepare("SELECT id FROM livros WHERE patrimonio = ?").get(patrimonio)
+
     if (existe) {
         return res.status(400).json({ message: "Já existe um livro com esse patrimônio." })
     }
@@ -38,10 +41,10 @@ app.post("/livros", (req, res) => {
     res.status(201).json(novoLivro)
 })
 
-
 app.patch("/livros/:id", (req, res) => {
     const id = Number(req.params.id)
     const livro = db.prepare("SELECT * FROM livros WHERE id = ?").get(id)
+
     if (!livro) {
         return res.status(404).json({ message: "Livro não encontrado." })
     }
@@ -49,12 +52,15 @@ app.patch("/livros/:id", (req, res) => {
     db.prepare("UPDATE livros SET destaque = ? WHERE id = ?").run(req.body.destaque ? 1 : 0, id)
 
     const atualizado = db.prepare("SELECT * FROM livros WHERE id = ?").get(id)
+
     res.json(atualizado)
 })
 
 app.delete("/livros/:id", (req, res) => {
     const id = Number(req.params.id)
+
     db.prepare("DELETE FROM livros WHERE id = ?").run(id)
+
     res.status(204).send()
 })
 
