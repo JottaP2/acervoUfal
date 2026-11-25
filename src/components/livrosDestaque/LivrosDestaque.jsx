@@ -14,7 +14,7 @@ export default function LivrosDestaque() {
             .catch(() => setLivros([]))
     }, [])
 
-    const destaques = livros.filter((livro) => livro.destaque).slice(0, 4)
+    const destaques = livros.slice(0, 4)
 
     if (destaques.length === 0) return null
 

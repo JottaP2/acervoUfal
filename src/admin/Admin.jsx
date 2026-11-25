@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
-import { Star, Trash2 } from "lucide-react"
-import LivroCard from "../components/livroCard/LivroCard"
+import { Trash2 } from "lucide-react"
 import { API_URL } from "../api"
 import Styles from "./Admin.module.css"
 
@@ -10,7 +9,6 @@ export default function Admin() {
     const [autor, setAutor] = useState("")
     const [patrimonio, setPatrimonio] = useState("")
     const [capa, setCapa] = useState("")
-    const [destaque, setDestaque] = useState(false)
     const [mensagem, setMensagem] = useState("")
 
     function buscarLivros() {
@@ -29,7 +27,6 @@ export default function Admin() {
         setAutor("")
         setPatrimonio("")
         setCapa("")
-        setDestaque(false)
     }
 
     function adicionarLivro() {
@@ -43,7 +40,7 @@ export default function Admin() {
             return
         }
 
-        const novoLivro = { titulo, autor, patrimonio, capa, destaque }
+        const novoLivro = { titulo, autor, patrimonio, capa }
 
         fetch(`${API_URL}/livros`, {
             method: "POST",
@@ -56,16 +53,6 @@ export default function Admin() {
                 buscarLivros()
             })
             .catch(() => setMensagem("Não foi possível salvar o livro."))
-    }
-
-    function trocarDestaque(livro) {
-        fetch(`${API_URL}/livros/${livro.id}`, {
-            method: "PATCH",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ destaque: !livro.destaque })
-        })
-            .then(() => buscarLivros())
-            .catch(() => setMensagem("Não foi possível atualizar o destaque."))
     }
 
     function removerLivro(livro) {
@@ -115,33 +102,11 @@ export default function Admin() {
                         />
                     </label>
 
-                    <label className={Styles.checkbox}>
-                        <input
-                            type="checkbox"
-                            checked={destaque}
-                            onChange={(e) => setDestaque(e.target.checked)}
-                        />
-                        Mostrar em "Livros em destaque"
-                    </label>
-
                     {mensagem && <p className={Styles.mensagem}>{mensagem}</p>}
 
                     <button className={Styles.botaoPrimario} onClick={adicionarLivro}>
                         Adicionar livro
                     </button>
-                </div>
-
-                <div className={Styles.previa}>
-                    <h2 className={Styles.secaoTitulo}>Prévia</h2>
-
-                    <div className={Styles.previaCard}>
-                        <LivroCard
-                            capa={capa}
-                            patrimonio={patrimonio || "000000"}
-                            titulo={titulo || "Título do livro"}
-                            autor={autor || "Autor"}
-                        />
-                    </div>
                 </div>
             </section>
 
@@ -162,14 +127,6 @@ export default function Admin() {
                                 <span>{livro.autor}</span>
                                 <span>Patrimônio {livro.patrimonio}</span>
                             </div>
-
-                            <button
-                                className={livro.destaque ? Styles.botaoDestaqueAtivo : Styles.botaoIcone}
-                                onClick={() => trocarDestaque(livro)}
-                                title="Destaque"
-                            >
-                                <Star size={18} fill={livro.destaque ? "currentColor" : "none"} />
-                            </button>
 
                             <button
                                 className={Styles.botaoRemover}

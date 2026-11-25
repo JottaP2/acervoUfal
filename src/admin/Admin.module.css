@@ -21,10 +21,10 @@
     font-size: 17px;
 }
 
-/* Formulário + prévia lado a lado */
+
 .cadastro {
-    display: grid;
-    grid-template-columns: 1fr 240px;
+    display: flex;
+    flex-direction: column;
     gap: 24px;
     margin-bottom: 40px;
 }
@@ -62,13 +62,6 @@
     font-size: 16px;
 }
 
-.checkbox {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-}
-
 .mensagem {
     margin: 0;
     padding: 10px 12px;
@@ -99,7 +92,6 @@
     max-width: 200px;
 }
 
-/* Lista de livros */
 .vazio {
     margin: 0;
     color: #5f6b7a;
@@ -149,8 +141,6 @@
     font-size: 15px;
 }
 
-.botaoIcone,
-.botaoDestaqueAtivo,
 .botaoRemover {
     display: grid;
     place-items: center;
@@ -164,18 +154,11 @@
     cursor: pointer;
 }
 
-.botaoDestaqueAtivo {
-    border-color: #f5c04a;
-    background: #fff8e6;
-    color: #d19a00;
-}
-
 .botaoRemover:hover {
     background: #fdecec;
     color: #b42318;
 }
 
-/* Celular: tudo em uma coluna */
 @media (max-width: 768px) {
     .adminMain {
         width: calc(100% - 32px);
